@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie AI - Personal Learning Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>🎓 EduGenie AI</h1>
+        <p>Your Personal AI Learning Assistant</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Ask EduGenie -->
+        <section class="card">
+            <h2>💬 Ask EduGenie</h2>
+
+            <textarea
+                id="question"
+                placeholder="Ask your educational question..."
+            ></textarea>
+
+            <button onclick="askQuestion()">
+                Ask EduGenie
+            </button>
+
+            <div id="qaResult" class="result"></div>
+        </section>
+
+
+        <!-- Explain a Topic -->
+        <section class="card">
+            <h2>📚 Explain a Topic</h2>
+
+            <input
+                type="text"
+                id="explainTopic"
+                placeholder="Enter topic"
+            >
+
+            <select id="explainLevel">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <button onclick="explainTopic()">
+                Explain Topic
+            </button>
+
+            <div id="explainResult" class="result"></div>
+        </section>
+
+
+        <!-- Generate Quiz -->
+        <section class="card">
+            <h2>🧠 Generate Quiz</h2>
+
+            <input
+                type="text"
+                id="quizTopic"
+                placeholder="Enter quiz topic"
+            >
+
+            <select id="quizNumber">
+                <option value="5">5 Questions</option>
+                <option value="10">10 Questions</option>
+                <option value="15">15 Questions</option>
+            </select>
+
+            <select id="quizDifficulty">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+
+            <button onclick="generateQuiz()">
+                Generate Quiz
+            </button>
+
+            <div id="quizResult" class="result"></div>
+        </section>
+
+
+        <!-- Summarize Text -->
+        <section class="card">
+            <h2>📝 Summarize Text</h2>
+
+            <textarea
+                id="summaryText"
+                placeholder="Paste your study material here..."
+            ></textarea>
+
+            <button onclick="summarizeText()">
+                Summarize
+            </button>
+
+            <div id="summaryResult" class="result"></div>
+        </section>
+
+
+        <!-- Learning Path -->
+        <section class="card">
+            <h2>🗺️ Learning Path</h2>
+
+            <input
+                type="text"
+                id="learningTopic"
+                placeholder="Enter learning topic"
+            >
+
+            <select id="learningLevel">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <select id="learningDuration">
+                <option value="2 weeks">2 Weeks</option>
+                <option value="4 weeks">4 Weeks</option>
+                <option value="8 weeks">8 Weeks</option>
+            </select>
+
+            <button onclick="createLearningPath()">
+                Create Learning Path
+            </button>
+
+            <div id="learningResult" class="result"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>EduGenie AI • AI-Powered Personal Learning Assistant</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
